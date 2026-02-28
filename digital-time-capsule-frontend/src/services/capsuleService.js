@@ -1,60 +1,10 @@
-
-
-// import axiosInstance from "./axiosInstance";
-
-// // Create Capsule (supports FormData)
-// export const createCapsule = async (data) => {
-//   const response = await axiosInstance.post("/capsules", data, {
-//     headers: {
-//       "Content-Type": "multipart/form-data",
-//     },
-//   });
-//   return response.data;
-// };
-
-// // Get User Capsules
-// export const getUserCapsules = async () => {
-//   const response = await axiosInstance.get("/capsules");
-//   return response.data;
-// };
-
-// // Delete Capsule
-// export const deleteCapsule = async (id) => {
-//   const response = await axiosInstance.delete(`/capsules/${id}`);
-//   return response.data;
-// };
-
-// console.log("Axios Instance:", axiosInstance);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// FRONTEND
-// File: src/services/capsuleService.js
-
 import axiosInstance from "./axiosInstance";
 
 // ============================
 // CREATE CAPSULE
 // ============================
 export const createCapsule = async (formData) => {
-  const response = await axiosInstance.post(
-    "/api/capsules", // ✅ FIXED PATH
-    formData
-  );
+  const response = await axiosInstance.post("/api/capsules", formData);
   return response.data;
 };
 
@@ -62,9 +12,7 @@ export const createCapsule = async (formData) => {
 // GET USER CAPSULES
 // ============================
 export const getUserCapsules = async () => {
-  const response = await axiosInstance.get(
-    "/api/capsules" // ✅ FIXED PATH
-  );
+  const response = await axiosInstance.get("/api/capsules");
   return response.data;
 };
 
@@ -72,21 +20,15 @@ export const getUserCapsules = async () => {
 // GET SINGLE CAPSULE
 // ============================
 export const getSingleCapsule = async (id) => {
-  const response = await axiosInstance.get(
-    `/api/capsules/${id}` // ✅ FIXED PATH
-  );
+  const response = await axiosInstance.get(`/api/capsules/${id}`);
   return response.data;
 };
-
 
 // ============================
 // UPDATE CAPSULE
 // ============================
 export const updateCapsule = async (id, data) => {
-  const response = await axiosInstance.put(
-    `/api/capsules/${id}`, // ✅ FIXED PATH
-    data
-  );
+  const response = await axiosInstance.put(`/api/capsules/${id}`, data);
   return response.data;
 };
 
@@ -94,8 +36,6 @@ export const updateCapsule = async (id, data) => {
 // DELETE CAPSULE
 // ============================
 export const deleteCapsule = async (id) => {
-  const response = await axiosInstance.delete(
-    `/api/capsules/${id}` // ✅ FIXED PATH
-  );
+  const response = await axiosInstance.delete(`/api/capsules/${id}`);
   return response.data;
 };

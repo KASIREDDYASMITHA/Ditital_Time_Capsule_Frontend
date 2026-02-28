@@ -1,6 +1,3 @@
-
-
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -46,15 +43,15 @@ export default function Register() {
   } = useForm({
     resolver: yupResolver(schema),
   });
-//   const onSubmit = async (data) => {
-//   try {
-//     await supabaseRegister(data);
-//     toast.success("Registered successfully! Check your email.");
-//     navigate("/login");
-//   } catch (error) {
-//     toast.error(error.message);
-//   }
-// };
+  //   const onSubmit = async (data) => {
+  //   try {
+  //     await supabaseRegister(data);
+  //     toast.success("Registered successfully! Check your email.");
+  //     navigate("/login");
+  //   } catch (error) {
+  //     toast.error(error.message);
+  //   }
+  // };
 
   const onSubmit = async (data) => {
     try {
@@ -89,7 +86,6 @@ export default function Register() {
         </p>
 
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
-
           <div>
             <input
               type="text"
@@ -98,9 +94,7 @@ export default function Register() {
               className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500"
             />
             {errors.name && (
-              <p className="text-red-500 text-sm mt-1">
-                {errors.name.message}
-              </p>
+              <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
             )}
           </div>
 
@@ -148,16 +142,10 @@ export default function Register() {
             />
             <button
               type="button"
-              onClick={() =>
-                setShowConfirmPassword(!showConfirmPassword)
-              }
+              onClick={() => setShowConfirmPassword(!showConfirmPassword)}
               className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500"
             >
-              {showConfirmPassword ? (
-                <EyeOff size={20} />
-              ) : (
-                <Eye size={20} />
-              )}
+              {showConfirmPassword ? <EyeOff size={20} /> : <Eye size={20} />}
             </button>
           </div>
           {errors.confirmPassword && (

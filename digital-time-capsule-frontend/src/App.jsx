@@ -6,13 +6,12 @@ import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import CreateCapsule from "./pages/CreateCapsule";
 import CapsuleDetails from "./pages/CapsuleDetails";
-import Settings from "./pages/Settings"; // ✅ ADD THIS
+import Settings from "./pages/Settings";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
     <Routes>
-
       {/* Public */}
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
@@ -66,11 +65,8 @@ function App() {
           </ProtectedRoute>
         }
       />
-
-
     </Routes>
   );
 }
 
 export default App;
-

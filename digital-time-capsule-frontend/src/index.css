@@ -2,7 +2,7 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 @custom-variant dark (&:is(.dark *));
-   :root {
+:root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -60,9 +60,9 @@ a:hover {
 
 body {
   margin: 0;
-  
 }
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -185,14 +185,15 @@ button:focus-visible {
   body {
     @apply bg-background text-foreground;
   }
-} */
+}
+*/
 
 /* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 body {
@@ -221,7 +222,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;   
+  padding: 15px 20px;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
 }
@@ -241,10 +242,8 @@ button {
   display: flex;
   align-items: center;
   gap: 25px;
-  flex-wrap: wrap;   
+  flex-wrap: wrap;
 }
-
-
 
 .nav-links a {
   color: white;
@@ -298,8 +297,8 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 60px 20px;  
-  min-height: auto;     
+  padding: 60px 20px;
+  min-height: auto;
 }
 @media (min-width: 1024px) {
   .hero-section {
@@ -313,7 +312,7 @@ button {
   max-width: 1100px;
   background: #f3f3f3;
   border-radius: 20px;
-  padding: 40px 20px;   
+  padding: 40px 20px;
   text-align: center;
 }
 
@@ -325,9 +324,8 @@ button {
 
 /* TITLE */
 
-
 .hero-title {
-  font-size: clamp(32px, 6vw, 72px);   /* CHANGED */
+  font-size: clamp(32px, 6vw, 72px); /* CHANGED */
 }
 
 /* SUBTEXT */
@@ -338,7 +336,6 @@ button {
   max-width: 750px;
   margin: 0 auto 40px auto;
 }
-
 
 /* BUTTONS */
 
@@ -401,7 +398,7 @@ button {
   width: 100%;
   max-width: 250px;
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: 0.3s;
 }
@@ -420,13 +417,18 @@ button {
   align-items: center;
   text-align: center;
 
-  background: radial-gradient(circle at center, #f2f2f2 0%, #e6e6e6 40%, #d9d9d9 100%);
-} 
+  background: radial-gradient(
+    circle at center,
+    #f2f2f2 0%,
+    #e6e6e6 40%,
+    #d9d9d9 100%
+  );
+}
 
 .logo-text {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
-  font-size: 22px;   /* reduced from 24+ */
+  font-size: 22px; /* reduced from 24+ */
   letter-spacing: 0.3px;
   color: #111827;
 }
