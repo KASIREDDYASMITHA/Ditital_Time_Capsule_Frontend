@@ -85,7 +85,7 @@ All API calls are handled inside the `services/` folder using Axios.
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://your-backend-url.com/api",
+  baseURL: "https://digital-time-capsule-backend-ymlv.onrender.com/",
 });
 
 export const createCapsule = (data) => API.post("/capsules", data);
@@ -132,7 +132,7 @@ Password: test@123
 ## ⚙️ Installation
 
 
-git clone https://github.com/KASIREDDYASMITHA/frontend-repo.git
+git clone https://github.com/KASIREDDYASMITHA/Ditital_Time_Capsule_Frontend
 cd frontend-repo
 npm install
 npm run dev
